@@ -3,11 +3,7 @@ import { colors } from "../assets/colors";
 import { fontFamily } from "../assets/fonts";
 import { HiShoppingCart } from "react-icons/hi";
 
-export default function Header({
-  isOpenSideBar,
-  cycleIsOpenSideBar,
-  productsSelecteds,
-}) {
+export default function Header({ cycleIsOpenSideBar, productsSelecteds }) {
   return (
     <HeaderHome>
       <TitlesHeader>

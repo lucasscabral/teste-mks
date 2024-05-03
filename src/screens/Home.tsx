@@ -12,7 +12,6 @@ export default function Home() {
   return (
     <>
       <Header
-        isOpenSideBar={isOpenSideBar}
         cycleIsOpenSideBar={cycleIsOpenSideBar}
         productsSelecteds={productsSelecteds}
       />
