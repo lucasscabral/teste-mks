@@ -4,11 +4,12 @@ import type { DataProduct } from "../types/product.type";
 import { useQuery } from "react-query";
 import api from "../api/api";
 import { Loading } from "notiflix";
+import React from "react";
 
 export default function ListProduct({
   productsSelecteds,
   setProductsSelecteds,
-}) {
+}): React.ReactNode {
   const { data, isLoading, isSuccess } = useQuery("produtos", () => {
     return api
       .get("/products?page=1&rows=6&sortBy=id&orderBy=DESC")
@@ -16,7 +17,8 @@ export default function ListProduct({
   });
 
   if (isLoading) {
-    return Loading.standard("Carregando...");
+    Loading.standard("Carregando...");
+    return "";
   } else if (isSuccess) Loading.remove();
   return (
     <Container>
